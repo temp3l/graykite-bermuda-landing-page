@@ -408,6 +408,90 @@ a:focus-visible {
   padding-bottom: 4rem;
 }
 
+.hero--overview {
+  padding-top: 1rem;
+}
+
+.section--rows {
+  padding-top: 1.5rem;
+  padding-bottom: 4rem;
+}
+
+.row-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.experience-row {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(12, 17, 39, 0.76);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
+}
+
+.experience-row--feature {
+  border-color: rgba(224, 184, 106, 0.34);
+}
+
+.experience-row__media {
+  display: block;
+  overflow: hidden;
+  border-radius: calc(var(--radius-lg) - 2px);
+  background: #08101f;
+}
+
+.experience-row__media img {
+  width: 100%;
+  aspect-ratio: 1.25 / 0.85;
+  object-fit: cover;
+  transition: transform 260ms ease;
+}
+
+.experience-row__media:hover img {
+  transform: scale(1.03);
+}
+
+.experience-row__body {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.experience-row__badge {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 0.7rem;
+  padding: 0.35rem 0.6rem;
+  color: #08101f;
+  background: linear-gradient(180deg, var(--gold-strong), var(--gold));
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.experience-row__top p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.experience-row__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(224, 184, 106, 0.14);
+  color: var(--gold-strong);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .strip {
   display: flex;
   flex-direction: column;
@@ -454,6 +538,17 @@ a:focus-visible {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .experience-row {
+    grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1.08fr);
+    align-items: stretch;
+    padding: 1.1rem;
+  }
+
+  .experience-row__media img {
+    aspect-ratio: 1 / 1;
+    min-height: 100%;
+  }
+
   .strip {
     flex-direction: row;
     align-items: center;
@@ -474,6 +569,10 @@ a:focus-visible {
 
   .stats-row {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .row-list {
+    gap: 1.15rem;
   }
 }
 
